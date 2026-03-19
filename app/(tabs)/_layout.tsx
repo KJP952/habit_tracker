@@ -23,11 +23,16 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
-      <Tabs.Screen
-        name="explore"
+       <Tabs.Screen
+        name="add-habit"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Add Habit',
+        }}
+      />
+      <Tabs.Screen
+        name="habit-progress"
+        options={{
+          title: 'Progress',
         }}
       />
     </Tabs>

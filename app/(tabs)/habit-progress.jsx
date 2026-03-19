@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function HomeScreen() {
+export default function HabitProgressScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Habit Tracker</Text>
-      <Text>Home page</Text>
+      <Text style={styles.title}>Habit Progress</Text>
+      <Text>Habit Progress</Text>
     </View>
   );
 }

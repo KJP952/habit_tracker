@@ -1,11 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function HomeScreen() {
+export default function AddHabitScreen() {
+    
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Habit Tracker</Text>
-      <Text>Home page</Text>
-    </View>
+          <Text style={styles.title}>Add Habit</Text>
+          <Text>Add a Habit</Text>
+        </View>
   );
 }
 
