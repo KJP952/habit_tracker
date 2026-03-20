@@ -13,6 +13,7 @@ export default function AddHabitScreen() {
 
   const AddHabit = () => {
     const Habit = {
+      id: Date.now().toString(),
       name: name,
       description: desc,
       daysPerWeek: Number(DaysPerWeek),
