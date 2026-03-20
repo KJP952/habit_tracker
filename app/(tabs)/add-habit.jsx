@@ -1,6 +1,30 @@
+import { useState } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function AddHabitScreen() {
+  const [name, setName] = useState('');
+  const [desc, setDesc] = useState (' ');
+  const [DaysPerWeek, setDaysPerWeek] = useState('');
+  const [category, setCategory] = useState('');
+
+ const AddHabit = () => {
+  const Habit = {
+    name: name,
+    description: desc,
+    daysPerWeek: Number(DaysPerWeek),
+    category: category,
+    TimesCompleted: [],
+  };
+
+  console.log(Habit);
+
+  setName('');
+  setDesc('');
+  setDaysPerWeek('');
+  setCategory('');
+  };
+
+
   return (
     <View style={styles.container}>
     <Text style={styles.title}>Add A Habit</Text>
@@ -9,30 +33,38 @@ export default function AddHabitScreen() {
       <TextInput
         style={styles.input}
         placeholder="Name"
+        value = {name}
+        onChangeText={setName}
       />
 
-       <Text>Habit Description</Text>
+      <Text>Habit Description</Text>
 
       <TextInput
         style={styles.input}
         placeholder="Description"
+        value = {desc}
+        onChangeText={setDesc}
       />
 
       <Text>Target</Text>
       <TextInput
         style={styles.input}
         placeholder="Days per week"
+        keyboardType= "numeric"
+        value = {DaysPerWeek}
+        onChangeText= {setDaysPerWeek}
       />
 
       <Text>Category</Text>
         <TextInput
         style={styles.input}
         placeholder="Category"
+        value = {category}
+        onChangeText= {setCategory}
       />
 
       
-
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={AddHabit}>
         <Text>Add</Text>
       </TouchableOpacity>
     </View>
