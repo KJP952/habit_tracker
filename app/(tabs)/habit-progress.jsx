@@ -1,5 +1,5 @@
 import { useLocalSearchParams } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function HabitViewer(){
   const params = useLocalSearchParams();
@@ -74,44 +74,59 @@ if (categoryNames.length === 0) {
 }
 
 return (
-  <View style={styles.container}>
+  <ScrollView style={styles.container}>
     <Text style={styles.title}>Habit Categories</Text>
     {content}
-  </View>
+  </ScrollView>
 );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    display: 'flex',
+    backgroundColor: '#f9eeee',
     padding: 20,
     paddingTop: 60,
   },
   title: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: 'bold',
+    marginTop: 30,
     marginBottom: 20,
     textAlign: 'center',
-  },
-  empty: {
-    fontSize: 14,
+    color: '#1C0A08',
   },
   categoryBox: {
-    marginBottom: 20,
+    backgroundColor: '#E9B5AF',
+    borderRadius: 18,
+    padding: 16,
+    marginBottom: 18,
+    borderWidth: 1,
+    borderColor: '#772A22',
   },
   categoryTitle: {
-    fontSize: 20,
-    fontWeight: '600',
-    marginBottom: 8,
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginBottom: 12,
+    color: '#1C0A08',
   },
   habitRow: {
+    backgroundColor: '#F4DAD7',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 10,
     borderWidth: 1,
-    borderColor: '#ccc',
-    padding: 10,
-    marginBottom: 8,
+    borderColor: '#772A22',
+  },
+  habitName: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#1C0A08',
+    marginBottom: 6,
   },
   text: {
     fontSize: 14,
-    marginBottom: 2,
+    color: '#1C0A08',
+    marginBottom: 3,
   },
 });
